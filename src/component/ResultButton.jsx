@@ -55,7 +55,6 @@ export function ResultButton({ daySelected, monthSelected, yearSelected,setError
             setError("invalidY")
       
           }else if(parsedYear > currentYear || parsedYear < 1900){
-            console.log("errorrrrr")
             setError("invalidY")
             resetValues()
 
@@ -63,7 +62,6 @@ export function ResultButton({ daySelected, monthSelected, yearSelected,setError
             const diffYears = currentYear - parsedYear;
             const diffMonths = currentMonth - parsedMonth;
             const diffDays = currentDay < parsedDay ? currentDay + (31 - parsedDay) : currentDay - parsedDay;
-            console.log(currentDay - parsedDay)
             setError(false)
             setYearResult(diffYears);
             setMonthResult(diffMonths >= 0 ? diffMonths : 12 - Math.abs(diffMonths));
