@@ -58,6 +58,8 @@ export function ResultButton({ daySelected, monthSelected, yearSelected,setError
             setError("invalidY")
             resetValues()
 
+          }else if(parsedDay > 31){
+            resetValues()
           } else {
             const diffYears = currentYear - parsedYear;
             const diffMonths = currentMonth - parsedMonth;
@@ -74,8 +76,8 @@ export function ResultButton({ daySelected, monthSelected, yearSelected,setError
   
       return (
         <div className="button__container">
-          <hr className="button__line"></hr>
-        <button className="button" onClick={handlerClick}></button>
+          <hr className="separator__line"></hr>
+        <button className="btn" onClick={handlerClick}></button>
       </div>
         )
 }

@@ -1,7 +1,7 @@
 
 export function Footer() {
   return (
-    <div className="footer__container">
+    <footer className="footer__container">
 
     <div className="footer__attr">
     Challenge by{" "}
@@ -10,6 +10,6 @@ export function Footer() {
     </a>
     . Coded by <a href="#">Franco Ricci</a>.
   </div>
-    </div>
+    </footer>
   )
 }
