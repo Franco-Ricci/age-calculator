@@ -22,7 +22,7 @@ export function InputForm({ error, setDaySelected, setMonthSelected, setYearSele
     <div className="input__container">
       <div className="input__content">
       <label className={error || error =="invalidD" || daySelected > 31 ?  "input__title input__title--error" : "input__title"} htmlFor="day">day</label>
-      <input className={error || error =="invalidD" || daySelected > 31 ? "input__text input__text--error" : "input__text" }  onChange={getDate} data-name="day" id="day" min={0} type="number" placeholder="DD" />
+      <input className={error || error =="invalidD" || daySelected > 31 ? "input__text input__text--error" : "input__text" }  onChange={getDate} data-name="day" id="day" min={1} type="number" placeholder="DD" />
       <span className="input__showError">{error == "empty" || daySelected == "" ? "This field is required" : error == "Leap" || error =="invalidD" || daySelected > 31 ? "Must be a valid day" : ""}</span>
 
       </div>
